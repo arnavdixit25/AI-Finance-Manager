@@ -8,9 +8,9 @@ AI Finance Manager demonstrates the seamless integration of AI and web technolog
 
 ## 🧠 Overview
 
-AI Finance Manager is a smart, scalable, and user-friendly platform that enables individuals to track expenses, set financial goals, and receive personalized insights through conversational AI. The platform uses custom AI logic to process user data, perform financial analysis, and respond to natural language queries.
+AI Finance Manager is a smart personal finance assistant that helps you manage your money better. It allows you to log and categorize expenses, set and track savings goals, and understand your financial behavior through visual dashboards. You can ask questions in plain English like “How much did I spend on food last month?” and get AI-generated responses using built-in NLP features.
 
-It features a responsive dashboard, goal tracker, printable reports, and intelligent recommendations—making it a complete toolkit for modern personal finance management.
+Built as a full-stack web app using React.js, Node.js, Express, and MongoDB, the app integrates custom Machine Learning logic and Natural Language Processing to make financial planning intuitive, intelligent, and user-friendly. It also supports exporting printable reports, giving you complete control and visibility over your financial health.
 
 ---
 
