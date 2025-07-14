@@ -1,0 +1,286 @@
+/* General Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Title Animation */
+.animated-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-buttons button {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-buttons button:hover {
+  background-color: #444;
+}
+
+.tab-buttons .active-tab {
+  background-color: #00bcd4;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Forms */
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.centered-form input,
+.goal-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+}
+
+.centered-form button,
+.goal-form button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.centered-form button:hover,
+.goal-form button:hover {
+  background-color: #0097a7;
+}
+
+/* Advice Section */
+#advice, .advice-text {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+#advice.clicked {
+  animation: pulse 0.4s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.toggle-button {
+  margin-top: 10px;
+  background-color: #607d8b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background-color: #455a64;
+}
+
+/* Transactions List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #2c2c2c;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Goal Tracker */
+.goal-container {
+  margin-top: 20px;
+}
+
+.goal-summary {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #444;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #00e676;
+  width: 0%;
+  transition: width 0.6s ease-in-out;
+}
+
+.progress-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.goal-met {
+  color: #00e676;
+}
+
+.goal-not-met {
+  color: #ffb74d;
+}
+
+/* Export & Session Buttons */
+.download-report-button,
+.new-session-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.download-report-button:hover,
+.new-session-button:hover {
+  background-color: #e64a19;
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Print Styling */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .tab-buttons,
+  .new-session-button,
+  .download-report-button,
+  .toggle-button,
+  .animated-title {
+    display: none !important;
+  }
+
+  .content {
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+    padding: 0;
+  }
+
+  ul li {
+    background: #f0f0f0;
+    color: #000;
+  }
+
+  .goal-summary,
+  .advice-text {
+    background: #f8f8f8;
+    color: #000;
+  }
+
+  .progress-fill {
+    background-color: #4caf50 !important;
+  }
+}
+/* Background Animation Layer */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Floating Circle Effect */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: float 20s infinite linear;
+  background: radial-gradient(circle, #00bcd4, #1e1e1e);
+}
+
+/* Define keyframes for floating motion */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.15;
+  }
+}
