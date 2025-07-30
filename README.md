@@ -52,6 +52,7 @@ Built as a full-stack web app using React.js, Node.js, Express, and MongoDB, the
 ---
 
 ## 🗂️ Project Structure
+```
 AI-Finance-Manager/
 ├── client/
 │ ├── public/
@@ -81,7 +82,7 @@ AI-Finance-Manager/
 │
 ├── LICENSE
 └── README.md
-
+```
 
 ---
 
